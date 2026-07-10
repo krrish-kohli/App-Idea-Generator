@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App Idea Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="geo-bg" aria-hidden="true">
+      <div class="geo-shape geo-circle"></div>
+      <div class="geo-shape geo-square"></div>
+      <div class="geo-shape geo-triangle"></div>
+    </div>
+
+    <div class="app">
+      <header class="header">
+        <div class="logo">
+          <div class="logo-shapes" aria-hidden="true">
+            <span class="shape shape-circle"></span>
+            <span class="shape shape-square"></span>
+            <span class="shape shape-triangle"></span>
+          </div>
+        </div>
+        <h1 class="headline">App Idea<br />Generator</h1>
+        <p class="tagline">
+          Turn your wildest thoughts into launch-ready app concepts.
+        </p>
+      </header>
+
+      <main class="main">
+        <section class="input-section bauhaus-card">
+          <h2 class="section-title">
+            <span class="title-shape" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <polygon points="12,2 22,20 2,20" />
+              </svg>
+            </span>
+            What's Your Spark?
+          </h2>
+          <p class="section-subtitle">
+            Describe a problem, niche, or wild idea — we'll craft a full app concept for you.
+          </p>
+
+          <form id="idea-form" class="idea-form">
+            <div class="textarea-wrapper">
+              <textarea
+                id="custom-prompt"
+                name="customPrompt"
+                rows="4"
+                placeholder="e.g. A fitness app for busy parents who only have 15 minutes a day..."
+                maxlength="500"
+                required
+              ></textarea>
+              <span class="char-count"><span id="char-count">0</span>/500</span>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" id="generate-btn" class="btn btn-primary">
+                <span class="btn-text">Generate Idea</span>
+              </button>
+              <button type="button" id="clear-btn" class="btn btn-secondary" hidden>
+                Clear
+              </button>
+            </div>
+          </form>
+
+          <div class="prompt-suggestions">
+            <span class="suggestions-label">Try:</span>
+            <button type="button" class="suggestion-chip" data-prompt="A social app for book lovers to swap recommendations">
+              Book Swap
+            </button>
+            <button type="button" class="suggestion-chip" data-prompt="An AI-powered meal planner for college students on a budget">
+              Meal Planner
+            </button>
+            <button type="button" class="suggestion-chip" data-prompt="A mindfulness app with 2-minute micro-meditations for commuters">
+              Mindfulness
+            </button>
+          </div>
+        </section>
+
+        <section id="loading-section" class="loading-section" hidden>
+          <div class="loader" aria-hidden="true">
+            <div class="loader-square"></div>
+            <div class="loader-circle"></div>
+          </div>
+          <p class="loading-text">Brewing Your Idea</p>
+          <p class="loading-subtext">Our AI entrepreneur is thinking hard</p>
+        </section>
+
+        <section id="error-section" class="error-section" hidden>
+          <div class="error-icon" aria-hidden="true">!</div>
+          <p id="error-message" class="error-message"></p>
+          <button type="button" id="dismiss-error" class="btn btn-secondary">Try Again</button>
+        </section>
+
+        <section id="result-section" class="result-section" hidden>
+          <div class="result-header">
+            <h2 class="section-title">
+              <span class="title-shape" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                  <circle cx="12" cy="12" r="8" />
+                </svg>
+              </span>
+              Your App Idea
+            </h2>
+            <div class="result-actions">
+              <button type="button" id="copy-btn" class="btn btn-ghost" title="Copy to clipboard">
+                <span id="copy-text">Copy</span>
+              </button>
+              <button type="button" id="regenerate-btn" class="btn btn-yellow" title="Regenerate">
+                Regenerate
+              </button>
+            </div>
+          </div>
+          <div id="idea-output" class="idea-output bauhaus-card bauhaus-card--blue"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="/js/app.js"></script>
+  </body>
+</html>
