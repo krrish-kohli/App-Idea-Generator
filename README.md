@@ -1,58 +1,43 @@
 # App-Idea-Generator
-A modern, responsive blog application built with React and Vite. This project demonstrates dynamic routing, component-based architecture, and centralized data management.
+A project description for App-Idea-Generator.
 
 🚀 Features
-Dynamic Routing: Seamless navigation between home, blog posts, and error pages using React Router.
-Component-Based UI: Modular and reusable components for a maintainable codebase.
-Clean Styling: Optimized CSS for a professional look and feel.
-Fast Performance: Powered by Vite for lightning-fast development and builds.
+- Feature 1
+- Feature 2
+- Feature 3
 
 📁 Project Structure
 The codebase is organized into logical directories for scalability:
 
-blog-app/
+App-Idea-Generator/
 ├── public/              # Static assets
-├── src/
-│   ├── assets/          # Images and icons
-│   ├── components/      # UI Components
-│   │   ├── Home.jsx         # Landing page showing blog feed
-│   │   ├── PostDetails.jsx  # Individual blog post view
-│   │   ├── PostLayout.jsx   # Shared layout for post-related pages
-│   │   └── NotFound.jsx     # 404 Error page
-│   ├── App.jsx          # Main application component & routes
-│   ├── App.css          # Global styles for App
-│   ├── data.js          # Centralized data store for blog posts
-│   ├── index.css        # Base styles and resets
-│   └── main.jsx         # Application entry point
-├── index.html           # HTML template
+├── views/               # Views/Templates
+├── .env.example         # Environment variables example
+├── .gitignore           # Git ignore file
+├── package-lock.json    # Dependencies lock file
 ├── package.json         # Project dependencies and scripts
-└── vite.config.js       # Vite configuration
+└── server.js            # Main server entry point
 
 🛠️ Tech Stack
-Framework: React
-Build Tool: Vite
-Routing: React Router
-Styling: CSS
+- Framework: Node.js/Express (based on server.js)
+- Build Tool: (N/A)
+- Styling: CSS
 
 ⚙️ Getting Started
 Prerequisites
-Node.js (v16.x or higher)
-npm or yarn
+- Node.js (v16.x or higher)
+- npm or yarn
 
 Installation
-Clone the repository:
-git clone https://github.com/krrish-kohli/App-Idea-Generator.git
-Navigate to the project directory:
-cd App-Idea-Generator
-Install dependencies:
-npm install
+1. Clone the repository:
+   git clone https://github.com/krrish-kohli/App-Idea-Generator.git
+2. Navigate to the project directory:
+   cd App-Idea-Generator
+3. Install dependencies:
+   npm install
 
 Development
-Run the development server:
-npm run dev
-
-Build
-Create a production-ready build:
-npm run build
+Run the server:
+node server.js
 
 Created by krrish-kohli
